@@ -140,14 +140,24 @@ const FinancialAi = () => {
       // } else {
       //   aiText = "No financial data found.";
       // }
-      if (aiData.yearlyIncome) {
-        aiText = `Your yearly income is ₹${(aiData.yearlyIncome ?? 0).toLocaleString("en-IN")}`;
-      } else if (aiData.yearlyExpense) {
-        aiText = `Your yearly expense is ₹${(aiData.yearlyExpense ?? 0).toLocaleString("en-IN")}`;
-      } else if (aiData.monthlyIncome) {
-        aiText = `Your ${aiData.month} income is ₹${(aiData.monthlyIncome ?? 0).toLocaleString("en-IN")}`;
-      } else if (aiData.monthlyExpense) {
-        aiText = `Your ${aiData.month} expense is ₹${(aiData.monthlyExpense ?? 0).toLocaleString("en-IN")}`;
+      if (aiData.yearlyIncome !== undefined) {
+        aiText = `Your yearly income is ₹${aiData.yearlyIncome.toLocaleString(
+          "en-IN",
+        )}`;
+      } else if (aiData.yearlyExpense !== undefined) {
+        aiText = `Your yearly expense is ₹${aiData.yearlyExpense.toLocaleString(
+          "en-IN",
+        )}`;
+      } else if (aiData.monthlyIncome !== undefined) {
+        aiText = `Your ${aiData.month} income is ₹${aiData.monthlyIncome.toLocaleString(
+          "en-IN",
+        )}`;
+      } else if (aiData.monthlyExpense !== undefined) {
+        aiText = `Your ${aiData.month} expense is ₹${aiData.monthlyExpense.toLocaleString(
+          "en-IN",
+        )}`;
+      } else {
+        aiText = "No financial data found.";
       }
 
       // ✅ AI Message
