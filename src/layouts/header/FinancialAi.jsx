@@ -141,13 +141,13 @@ const FinancialAi = () => {
       //   aiText = "No financial data found.";
       // }
       if (aiData.yearlyIncome) {
-        aiText = `Your yearly income is ₹${aiData.yearlyIncome.toLocaleString("en-IN") || 0}`;
+        aiText = `Your yearly income is ₹${(aiData.yearlyIncome ?? 0).toLocaleString("en-IN")}`;
       } else if (aiData.yearlyExpense) {
-        aiText = `Your yearly expense is ₹${aiData.yearlyExpense.toLocaleString("en-IN") || 0}`;
+        aiText = `Your yearly expense is ₹${(aiData.yearlyExpense ?? 0).toLocaleString("en-IN")}`;
       } else if (aiData.monthlyIncome) {
-        aiText = `Your ${aiData.month} income is ₹${aiData.monthlyIncome.toLocaleString("en-IN") || 0}`;
+        aiText = `Your ${aiData.month} income is ₹${(aiData.monthlyIncome ?? 0).toLocaleString("en-IN")}`;
       } else if (aiData.monthlyExpense) {
-        aiText = `Your ${aiData.month} expense is ₹${aiData.monthlyExpense.toLocaleString("en-IN") || 0}`;
+        aiText = `Your ${aiData.month} expense is ₹${(aiData.monthlyExpense ?? 0).toLocaleString("en-IN")}`;
       }
 
       // ✅ AI Message
