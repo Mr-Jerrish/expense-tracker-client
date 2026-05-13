@@ -25,7 +25,7 @@ const CategoryCard = ({ data = [], type = "income" }) => {
                   {item.name}
                 </span>
                 <span className="text-gray-800 dark:text-white font-medium">
-                  ₹{item.amount}
+                  ₹{item.amount.toLocaleString("en-IN")}
                 </span>
               </div>
 

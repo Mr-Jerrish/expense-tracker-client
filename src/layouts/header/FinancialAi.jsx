@@ -133,12 +133,21 @@ const FinancialAi = () => {
       // ✅ Dynamic Message
       let aiText = "";
 
+      // if (aiData.yearlyIncome) {
+      //   aiText = `Your yearly income is ₹${aiData.yearlyIncome}`;
+      // } else if (aiData.yearlyExpense) {
+      //   aiText = `Your yearly expense is ₹${aiData.yearlyExpense}`;
+      // } else {
+      //   aiText = "No financial data found.";
+      // }
       if (aiData.yearlyIncome) {
-        aiText = `Your yearly income is ₹${aiData.yearlyIncome}`;
+        aiText = `Your yearly income is ₹${aiData.yearlyIncome.toLocaleString("en-IN") || 0}`;
       } else if (aiData.yearlyExpense) {
-        aiText = `Your yearly expense is ₹${aiData.yearlyExpense}`;
-      } else {
-        aiText = "No financial data found.";
+        aiText = `Your yearly expense is ₹${aiData.yearlyExpense.toLocaleString("en-IN") || 0}`;
+      } else if (aiData.monthlyIncome) {
+        aiText = `Your ${aiData.month} income is ₹${aiData.monthlyIncome.toLocaleString("en-IN") || 0}`;
+      } else if (aiData.monthlyExpense) {
+        aiText = `Your ${aiData.month} expense is ₹${aiData.monthlyExpense.toLocaleString("en-IN") || 0}`;
       }
 
       // ✅ AI Message

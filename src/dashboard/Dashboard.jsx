@@ -45,7 +45,7 @@ const Dashboard = () => {
           {/* Income */}
           <KpiCards
             title="Total Income"
-            value={`₹${data.totalIncome}`}
+            value={`₹${(data?.totalIncome ?? 0).toLocaleString("en-IN")}`}
             icon="💰"
             bgColor="from-green-100 to-green-50 dark:from-green-900/20 dark:to-green-800/10"
             borderColor="border-green-200 dark:border-green-800"
@@ -58,7 +58,7 @@ const Dashboard = () => {
           {/* Expense */}
           <KpiCards
             title="Total Expense"
-            value={`₹${data.totalExpense}`}
+            value={`₹${(data.totalExpense ?? 0).toLocaleString("en-IN")}`}
             icon="💸"
             bgColor="from-red-100 to-red-50 dark:from-red-900/20 dark:to-red-800/10"
             borderColor="border-red-200 dark:border-red-800"
@@ -71,7 +71,7 @@ const Dashboard = () => {
           {/* Balance */}
           <KpiCards
             title="Balance"
-            value={`₹${data.balance}`}
+            value={`₹${(data.balance ?? 0).toLocaleString("en-IN")}`}
             icon="📊"
             bgColor="from-purple-100 to-purple-50 dark:from-purple-900/20 dark:to-purple-800/10"
             borderColor="border-purple-200 dark:border-purple-800"

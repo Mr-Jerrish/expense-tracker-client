@@ -213,7 +213,7 @@ const Income = () => {
             bgColor="from-emerald-500 to-green-600"
             icon={<DollarSign className="text-white" />}
             iconBg="bg-white/20"
-            value={`₹ ${summaryData.yearIncome}`}
+            value={`₹ ${(summaryData.yearIncome ?? 0).toLocaleString("en-IN")}`}
             textColor="text-white"
             textLastColor="text-emerald-100"
             year={`${financialYear} Year`}
@@ -228,7 +228,7 @@ const Income = () => {
               <Calendar className="text-emerald-600 dark:text-emerald-400 font-xs" />
             }
             iconBg="bg-emerald-100 dark:bg-emerald-950"
-            value={`₹ ${summaryData.monthIncome}`}
+            value={`₹ ${(summaryData.monthIncome ?? 0).toLocaleString("en-IN")}`}
             textColor="text-gray-900 dark:text-white"
             textLastColor="text-emerald-600 dark:text-emerald-400"
             year="This Month"
@@ -243,7 +243,7 @@ const Income = () => {
               <TrendingUp className="text-blue-600 dark:text-blue-400 font-xs" />
             }
             iconBg="bg-blue-100 dark:bg-blue-950"
-            value={`₹ ${summaryData.todayIncome}`}
+            value={`₹ ${(summaryData.todayIncome ?? 0).toLocaleString("en-IN")}`}
             textColor="text-gray-900 dark:text-white"
             textLastColor="text-gray-500 dark:text-gray-500"
             year="Today"
@@ -257,7 +257,7 @@ const Income = () => {
               <LayoutGrid className="text-purple-600 dark:text-purple-400 font-xs" />
             }
             iconBg="bg-purple-100 dark:bg-purple-950"
-            value={summaryData.totalCategories}
+            value={(summaryData.totalCategories ?? 0).toLocaleString("en-IN")}
             textColor="text-gray-900 dark:text-white"
             textLastColor="text-gray-500 dark:text-gray-500"
             year="Active Revenue Streams"
