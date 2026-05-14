@@ -347,7 +347,7 @@ const FinancialAi = () => {
               </div>
 
               {/* Messages */}
-              <div className="flex-1 overflow-y-auto p-5 space-y-5 bg-gray-50 dark:bg-gray-950">
+              <div className="flex-1 overflow-y-auto p-3 space-y-3 bg-gray-50 dark:bg-gray-950">
                 {messages.map((message, index) => (
                   <motion.div
                     key={message.id}
@@ -366,8 +366,8 @@ const FinancialAi = () => {
                         {/* Bot Icon */}
                         <div
                           className="
-                            w-10
-                            h-7
+                            w-5
+                            h-5
                             rounded-lg
                             bg-gradient-to-br
                             from-purple-600
@@ -376,9 +376,10 @@ const FinancialAi = () => {
                             items-center
                             justify-center
                             shadow-lg
+                            p-1
                           "
                         >
-                          <Bot className="w-6 h-6 text-white" />
+                          <Bot className="w-4 h-4 text-white" />
                         </div>
 
                         <div>
@@ -393,8 +394,8 @@ const FinancialAi = () => {
                               shadow-md
                               rounded-2xl
                               rounded-tl-sm
-                              px-4
-                              py-3
+                              px-2
+                              py-2
                             "
                           >
                             <p className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed">
@@ -438,7 +439,7 @@ const FinancialAi = () => {
                           )} */}
 
                           {/* Time */}
-                          <p className="text-xs text-gray-400 mt-2">
+                          <p className="text-xs text-gray-400 mt-1">
                             {message.timestamp.toLocaleTimeString([], {
                               hour: "2-digit",
                               minute: "2-digit",
@@ -454,8 +455,8 @@ const FinancialAi = () => {
                             bg-gradient-to-r
                             from-purple-600
                             to-blue-600
-                            px-4
-                            py-3
+                            px-2
+                            py-2
                             rounded-2xl
                             rounded-tr-sm
                             shadow-lg

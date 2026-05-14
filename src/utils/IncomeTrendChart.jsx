@@ -52,9 +52,9 @@ const CustomTooltip = ({ payload, label, type }) => {
 const IncomeTrendChart = ({ data = [], type = "income" }) => {
   const { theme } = useTheme();
   return (
-    <div className="w-full  p-4 rounded-2xl bg-white dark:bg-[#0f172a] shadow hover:shadow-xl">
+    <div className="w-full  p-3 rounded-2xl bg-white dark:bg-[#0f172a] shadow hover:shadow-xl">
       {/* Title */}
-      <h2 className="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">
+      <h2 className="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">
         Income Trend (12 Months)
       </h2>
 
@@ -80,7 +80,7 @@ const IncomeTrendChart = ({ data = [], type = "income" }) => {
             stroke={type === "income" ? "#10b981" : "#ef4444"}
             strokeWidth={3}
             dot={{ r: 4 }}
-            activeDot={{ r: 6 }}
+            // activeDot={{ r: 6 }}
           />
         </LineChart>
       </ResponsiveContainer>

@@ -131,6 +131,7 @@ const Income = () => {
       setEditById(null);
       getAll();
       getsummary();
+      getMonthlyIncome();
     } catch (error) {
       toast.error(err?.response?.data?.paramObjectsMap?.message || "Failed");
     } finally {

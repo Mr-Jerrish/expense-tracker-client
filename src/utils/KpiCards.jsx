@@ -19,7 +19,7 @@ const KpiCards = ({
       shadow-sm hover:shadow-lg  hover:scale-105
       transition-all duration-700 `}
     >
-      <div className="flex items-center justify-between mb-2">
+      <div className="flex items-center justify-between mb-1">
         {/* Icon */}
         <div
           className="rounded-xl 
@@ -28,7 +28,7 @@ const KpiCards = ({
           {icon}
         </div>
         <h3
-          className="text-xs tracking-widest uppercase mb-2 
+          className="text-xs tracking-widest uppercase mb-1 
         text-gray-600 dark:text-gray-400"
         >
           {title}
@@ -53,7 +53,7 @@ const KpiCards = ({
 
       {/* Value */}
       <p
-        className="text-2xl font-bold 
+        className="text-xl font-bold 
         text-gray-900 dark:text-white"
       >
         {value}
@@ -61,7 +61,7 @@ const KpiCards = ({
 
       {/* Bottom */}
       <div
-        className="flex items-center justify-between mt-4 text-xs 
+        className="flex items-center justify-between mt-2 text-xs 
         text-gray-500 dark:text-gray-400"
       >
         <span>{bText}</span>

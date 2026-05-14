@@ -15,14 +15,14 @@ const IncomeKPICards = ({
   return (
     <>
       <div
-        className={`p-2 rounded-2xl border ${borderColor} bg-gradient-to-br ${bgColor} shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-700`}
+        className={`p-1.5 rounded-2xl border ${borderColor} bg-gradient-to-br ${bgColor} shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-700`}
       >
-        <div className="flex items-center justify-between mb-2">
-          <div className={`p-2  ${iconBg}  rounded-xl`}>{icon}</div>
+        <div className="flex items-center justify-between mb-1">
+          <div className={`p-1  ${iconBg} rounded-xl`}>{icon}</div>
           <div className={`text-sm font-medium ${titleTextColor}`}>{title}</div>
         </div>
         <p
-          className={`text-2xl font-bold 
+          className={`text-xl font-bold 
        ${textColor}`}
         >
           {value}

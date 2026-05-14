@@ -5,12 +5,12 @@ const CategoryCard = ({ data = [], type = "income" }) => {
 
   return (
     <div
-      className="w-full max-w-sm rounded-2xl p-5 
+      className="w-full max-w-sm rounded-2xl p-4 
       bg-white dark:bg-[#0f172a] 
       shadow hover:shadow-lg
       transition-all duration-300"
     >
-      <h2 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">
+      <h2 className="text-md font-semibold text-gray-800 dark:text-white mb-4">
         By Category
       </h2>
 
