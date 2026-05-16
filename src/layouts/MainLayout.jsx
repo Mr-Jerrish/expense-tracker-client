@@ -34,7 +34,7 @@ const MainLayout = () => {
   "
           />
         </div>
-        <div className="px-8 py-5">
+        <div className="px-4 py-3 md:px-8 md:py-5">
           <Outlet />
         </div>
       </div>

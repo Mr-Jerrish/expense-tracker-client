@@ -252,11 +252,10 @@ const FinancialAi = () => {
                 fixed
                  top-0
                 right-0
-                w-[380px]
-                h-[628px]
+                max-w-sm
+                min-h-screen
                 bg-white
                 dark:bg-gray-900
-                
                 overflow-hidden
                 shadow-2xl
                 border

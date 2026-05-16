@@ -10,7 +10,7 @@ const Logo = () => {
           <Sparkles className="text-white w-3 h-3" />
         </div>
         <div className="h1 font-bold text-gray-900 dark:text-white">
-          ExpenseTracker
+          XTRACKER
         </div>
       </div>
     </>

@@ -46,15 +46,15 @@ const CommonListview = ({
       {/*  header*/}
       <div className="flex justify-between items-center">
         <div>
-          <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+          <h3 className="text-sm md:text-lg font-bold text-gray-900 dark:text-white">
             {title}
           </h3>
-          <p className="text-sm text-gray-500 dark:text-gray-400">
+          <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400">
             {length} transactions found
           </p>
         </div>
         <div className="flex gap-2">
-          <div className="relative w-full sm:w-64">
+          <div className="hidden md:flex relative w-full">
             <Search className="absolute left-4 top-3 h-3 w-3 text-slate-400" />
             <input
               type="text"
@@ -107,17 +107,17 @@ const CommonListview = ({
         </div>
         <div className="flex gap-2">
           <button
-            className="flex items-center gap-1 text-sm font-medium  border  border-gray-900 dark:border-gray-300 px-2 py-1 rounded-lg text-slate-950 dark:text-white hover:scale-105 transition-all duration-700"
+            className="flex items-center gap-1 text-sm font-medium  border  border-gray-900 dark:border-gray-300 px-1 py-1 md:px-1 rounded-lg text-slate-950 dark:text-white hover:scale-105 transition-all duration-700"
             onClick={handleExport}
           >
-            <Download className="w-3 h-3" />
+            <Download className="hidden md:flex w-3 h-3" />
             Export
           </button>
           <button
             className="flex items-center gap-1 text-sm font-medium  bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 border  border-gray-900 dark:border-gray-300 px-2 py-1 rounded-lg text-white hover:scale-105 transition-all duration-700"
             onClick={handleNew}
           >
-            <Plus className="w-3 h-3" />
+            <Plus className="hidden md:flex w-3 h-3" />
             {addNew}
           </button>
         </div>
@@ -132,7 +132,7 @@ const CommonListview = ({
                 {columns.map((col) => (
                   <th
                     key={col.key}
-                    className="px-3 py-2 text-left font-semibold text-slate-600 dark:text-slate-300"
+                    className="px-1 py-1 md:px-3 md:py-2 text-xs md:text-sm text-left font-medium md:font-semibold text-slate-800 dark:text-slate-300"
                   >
                     {col.label}
                   </th>
@@ -151,7 +151,7 @@ const CommonListview = ({
                     {columns.map((col) => (
                       <td
                         key={col.key}
-                        className="px-3 py-1 text-slate-700 dark:text-slate-200"
+                        className="px-1 py-1 md:px-3 md:py-1 text-slate-700 dark:text-slate-200"
                       >
                         {col.key === "action" ? (
                           <button
@@ -166,7 +166,7 @@ const CommonListview = ({
           transition
         "
                           >
-                            <PencilIcon className="w-4 h-4" />
+                            <PencilIcon className="w-3 h-3 md:w-4 md:h-4" />
                           </button>
                         ) : col.type === "date" ? (
                           dayjs(row[col.key]).format("DD-MM-YYYY")
