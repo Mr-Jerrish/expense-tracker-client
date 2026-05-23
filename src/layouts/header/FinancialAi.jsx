@@ -543,7 +543,8 @@ const FinancialAi = () => {
                       value={inputValue}
                       onChange={(e) => setInputValue(e.target.value)}
                       onKeyDown={handleKeyPress}
-                      placeholder="Ask about your finance..."
+                      // placeholder="Ask about your finance..."
+                      placeholder="Ex: Show My yearly income"
                       className="
                         w-full
                         px-4
